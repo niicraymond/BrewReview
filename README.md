@@ -1,50 +1,74 @@
-# Welcome to your Expo app 👋
+# BrewReview (Bootcamp Group Project)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Demo: run locally via Expo
 
-## Get started
+## Overview
+Cross-platform mobile app built with Expo/React Native for reviewing beers and breweries. Users can authenticate, browse beers and breweries, post reviews, follow other users, manage favorites, view recent activity, and explore via map or categories.
 
-1. Install dependencies
+## Features
+- User authentication (Firebase Auth)  
+- View home feed, individual beers, breweries, user profiles  
+- Post beer reviews  
+- Follow/unfollow users  
+- Favorite beers and breweries  
+- Browse by categories  
+- Map view of breweries  
+- View followers/following lists  
+- Recent reviews feed  
+- Settings and profile management  
+- Toast notifications and loading states  
 
-   ```bash
-   npm install
-   ```
+## Technologies Used
+- Expo / React Native  
+- Expo Router (file-based routing)  
+- Firebase (Auth + Firestore)  
+- NativeWind (Tailwind-style styling for RN)  
+- React Native Paper  
+- React Navigation (native stack)  
+- Toast messages (`react-native-toast-message`)  
+- JavaScript / JSX  
+- ESLint / TypeScript tooling in dev  
 
-2. Start the app
+## Prerequisites
+- Node.js (recommended latest LTS)  
+- Android Studio (for Android emulator) or Xcode (for iOS simulator) if not using Expo Go  
+- Expo-compatible device (Expo Go) or simulator/emulator  
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+## Setup Instructions
 ```bash
-npm run reset-project
+git clone https://github.com/niicraymond/BrewReview/
+cd bootcamp_group_project/BrewReview
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Start the app:
+```bash
+npm run start
+```
 
-## Learn more
+Then choose one of:
+- Run on Android emulator: `npm run android`  
+- Run on iOS simulator: `npm run ios`  
+- Open in web: `npm run web`  
+- Scan the QR code with Expo Go on your mobile device  
 
-To learn more about developing your project with Expo, look at the following resources:
+## Scripts
+- `npm run start` – launch Expo dev tools  
+- `npm run android` – open in Android emulator  
+- `npm run ios` – open in iOS simulator  
+- `npm run web` – run as web app  
+- `npm run lint` – run ESLint  
+- `npm run reset-project` – reset starter state (moves current code to example folder)  
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Data / Backend
+Uses Firebase Firestore for persistence. Core collections include:
+- `users` – user profiles, followers/following  
+- `beers` / `breweries` – entities being reviewed  
+- `reviews` – user reviews, vote tracking  
+- `categories` – classification for browsing  
 
-## Join the community
+Utility modules handle fetching entities and vote/follow logic.
 
-Join our community of developers creating universal apps.
+## Author / Team
+Bootcamp Group Project - Developed By Nicole Raymond, George Harper, Sam Joy, Katherin Bennet and Manuel González 
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
