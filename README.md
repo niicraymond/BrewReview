@@ -37,7 +37,7 @@ Cross-platform mobile app built with Expo/React Native for reviewing beers and b
 ## Setup Instructions
 ```bash
 git clone https://github.com/niicraymond/BrewReview/
-cd bootcamp_group_project/BrewReview
+cd BrewReview
 npm install
 ```
 
